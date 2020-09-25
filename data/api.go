@@ -1,8 +1,8 @@
 package rtndata
 
 import (
+	"GolangSimple/dbmysql"
 	"fmt"
-	"project/dbmysql"
 	"time"
 )
 

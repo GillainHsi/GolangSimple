@@ -1,9 +1,9 @@
 package rtndata
 
 import (
+	"GolangSimple/dbmysql"
 	"fmt"
 	"net/http"
-	"project/dbmysql"
 )
 
 //HandleDataPost ...

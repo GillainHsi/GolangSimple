@@ -1,10 +1,10 @@
 package main
 
 import (
+	rtndata "GolangSimple/data"
+	"GolangSimple/dbmysql"
 	"fmt"
 	"net/http"
-	rtndata "project/data"
-	"project/dbmysql"
 )
 
 var db *dbmysql.DBOperator
