@@ -6,11 +6,6 @@ import (
 	"time"
 )
 
-// 3. 有二個endpoint
-// - GET /data → 回傳所有database裡面的data
-// - POST /data → 把上傳的data存入database
-
-//InsertData ... must return anyway
 func InsertData(data Data, db *dbmysql.DBOperator) (respData string) {
 
 	sqlCmd := "INSERT INTO `data` (`id`, `lat`, `long`, `dateadded`) VALUES ('%v', %v, %v, '%v');"
@@ -34,7 +29,6 @@ func InsertData(data Data, db *dbmysql.DBOperator) (respData string) {
 	return ResponseData(respdata)
 }
 
-//QueryDataRow ... must return anyway
 func QueryDataRow(db *dbmysql.DBOperator) (respData string) {
 
 	sqlCmd := "SELECT dt.id AS 'id', dt.lat AS 'lat', dt.`long` AS 'long', dt.dateadded AS 'dateadded' FROM `data` dt;"

@@ -1,6 +1,5 @@
 package rtndata
 
-//Data ...  orm
 type Data struct {
 	ID       string `json:"ID"`
 	Location struct {
@@ -10,7 +9,6 @@ type Data struct {
 	DateAdded interface{} `json:"DateAdded"`
 }
 
-//RespData ... return json
 type RespData struct {
 	Success bool   `json:"success"`
 	ErrCode int    `json:"errCode"`

@@ -6,7 +6,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-//DBOperator ...
 type DBOperator struct {
 	conn   *sql.DB
 	dbname string
@@ -15,13 +14,11 @@ type DBOperator struct {
 	errMsg string
 }
 
-//DBResponse ...
 type DBResponse struct {
 	RowsResponse []map[string]string
 	Length       uint32
 }
 
-//InitDB ...
 func InitDB(user, pass, host, dbname string) (*DBOperator, error) {
 	sqlDB, err := sql.Open("mysql", user+":"+pass+"@tcp("+host+")/"+dbname+"?charset=utf8")
 	if err != nil {

@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-//Exec ..
 func (ref *DBOperator) Exec(sqlCmd string, args ...interface{}) (int64, error) {
 	if args != nil && len(args) != 0 {
 		sqlCmd = fmt.Sprintf(sqlCmd, args...) // auto trans %v => input value
@@ -36,7 +35,6 @@ func (ref *DBOperator) Exec(sqlCmd string, args ...interface{}) (int64, error) {
 	return resp.RowsAffected()
 }
 
-//Query ...
 func (ref *DBOperator) Query(sqlCmd string, args ...interface{}) (*DBResponse, error) {
 	if args != nil && len(args) != 0 {
 		sqlCmd = fmt.Sprintf(sqlCmd, args...) // auto trans %v => input value

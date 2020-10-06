@@ -6,9 +6,8 @@ import (
 	"net/http"
 )
 
-//HandleDataPost ...
 func HandleDataPost(w http.ResponseWriter, r *http.Request, db *dbmysql.DBOperator) {
-	//map[id:[P000001] lat:[10.1234445] long:[23.75522]]  ... map[string]slice
+
 	r.ParseForm()
 	ok := CheckDataParameter(r.PostForm)
 	if !ok {
@@ -40,12 +39,10 @@ func HandleDataPost(w http.ResponseWriter, r *http.Request, db *dbmysql.DBOperat
 	return
 }
 
-//HandleDataGet ...
 func HandleDataGet(w http.ResponseWriter, r *http.Request, db *dbmysql.DBOperator) {
 	w.Write([]byte(QueryDataRow(db)))
 }
 
-//HandleDataUnknowMethod ...
 func HandleDataUnknowMethod(w http.ResponseWriter, r *http.Request, db *dbmysql.DBOperator) {
 	respdata := RespData{
 		Success: false,
